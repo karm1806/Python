@@ -1,0 +1,12 @@
+name="Karm"
+print(name)
+print(type(name))
+age=10.5
+print(age)
+print(type(age))
+height=140
+print(height)
+print(type(height))
+h=int(age)
+print(h)
+print(type(h))
