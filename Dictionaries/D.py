@@ -1,0 +1,9 @@
+dict={"Name":"Karm","Age":11,"Class":"Sixth"}
+print(dict)
+print(dict['Name'])
+dict['City']="Surat"
+print(dict['City'])
+dict.pop('Class')
+print(dict)
+dict.clear()
+print(dict)
