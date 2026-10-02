@@ -60,16 +60,11 @@ def add_contact(pb):
 			dip.append( 
 				str(input("Enter category(Family/Friends/Work/Others): "))) 
 	pb.append(dip) 
-	# And once you modify the list, you return it to the calling function wiz main, here. 
 	return pb
-def remove_existing(pb): 
-	# This function is to remove a contact's details from existing phonebook 
+def remove_existing(pb):  
 	query = str( 
 		input("Please enter the name of the contact you wish to remove: ")) 
-	# We'll collect name of the contact and search if it exists in our phonebook 	
-	temp = 0
-	# temp is a checking variable here. We assigned a value 0 to temp. 
-	
+	temp = 0	
 	for i in range(len(pb)): 
 		if query == pb[i][0]: 
 			temp += 1

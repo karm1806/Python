@@ -10,7 +10,7 @@ def initial_slambook():
         temp=[]
         for j in range(cols):
             if j == 0:
-                temp.apeend(str(input("Enter name*:")))
+                temp.append(str(input("Enter name*:")))
                 if temp[j] == '' or temp[j] == ' ':
                     sys.exit(
                         "Name is a mandatory field. Process exiting due to blank field..."
@@ -31,8 +31,44 @@ def initial_slambook():
                     )
                     if temp[j] == '' or temp[j] == ' ':
                         temp[j] = None
-            slam_book.apeend(temp)
+            slam_book.append(temp)
         print(slam_book)
         return slam_book
 def menu():
     print("********************************************")
+print("\t\SMARTPHONE DIRECTORY", flush=False)
+print("\tYou can now perform the follwing opeartion on this\nslambook\n")
+print("1. Add a new contact")
+print("2. Exit phonebook")
+def add_contact(pb):
+    dip=[]
+    for i in range(len(pb[0])):
+        if i == 0:
+            dip.append(str(input("Enter name: ")))
+        if i == 1:
+            dip.append(int(input("Enter number: ")))
+        if i == 2:
+            dip.append(str(input("Enter e-mail address: ")))
+        if i == 3:
+            dip.append(str(input("Enter date of birth(dd/mm/yy)")))
+        if i == 4:
+            dip.append(str(input("Enter category (family/Friends/Work/Others): ")))
+    pb.append(dip)
+    return pb
+def thanks():
+    print("********************************************************")
+    print("Thank you for using our Slam Book")
+    print("Please visit again!")
+    print("********************************************************")
+    sys.exit("Goodbye, have a nice day ahead!")
+print("............................................")  
+print("Hello dear Friends, welcome to our Slam Book")
+print("You may now proceed to explore this Slam Book and fill your details about your Friends")  
+ch = 1
+pb = initial_slambook()
+while ch in (1,2,3,4,5):
+    ch = menu()
+    if ch == 4:
+        pb = add_contact(pb)
+    else:
+        thanks()
