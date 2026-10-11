@@ -1,4 +1,0 @@
-IMPORTANT: Complete Python homework
-NOTE: read(n) previews characters
-SKIP: This line is not needed
-TODO: Practise loops with files
